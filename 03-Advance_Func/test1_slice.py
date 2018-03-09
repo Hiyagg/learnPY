@@ -2,7 +2,6 @@
 
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-
 def trim(s):
     if s=='':
         return s
@@ -13,6 +12,7 @@ def trim(s):
     while(s[-1]==' '):
         s=s[:-1]
     return s
+
 # 测试:
 if trim('hello  ') != 'hello':
     print('测试失败!')
