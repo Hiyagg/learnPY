@@ -31,3 +31,32 @@ if f != 33:
     print('测试失败!')
 elif s != 7986:
     print('测试失败!')
+
+# 小结问题
+
+def log(x='call'):
+        def decorator(func):
+            @functools.wraps(func)
+            def wrapper(*args,**kw):
+                if callable(x):
+                    print('begin call %s' % func.__name__)
+                else:
+                    print('%s %s' % (x,func.__name__))
+                s=func(*args,**kw)
+                print('end call %s' % func.__name__)
+                return s
+            return wrapper
+        if callable(x):
+            return decorator(x)
+        else:
+            return decorator
+
+@log            #实际上等于fun1 = log(fun1)
+def fun1(x,y):
+    return x*y
+@log('execute') #实际上等于fun2 = log('execute')(fun2)
+def fun2(x,y):
+    return x*y
+print(fun1(8,9),fun2(9,9))
+
+
