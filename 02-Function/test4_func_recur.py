@@ -12,7 +12,6 @@ def move(n,a,b,c):
         move(1,a,b,c)
         move(n-1,b,a,c)
 
-
 # 期待输出:
 # A --> C
 # A --> B
