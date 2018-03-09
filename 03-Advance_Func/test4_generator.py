@@ -8,8 +8,6 @@ def  triangles():
         yield L
         L=[1]+[L[n]+L[n+1] for n in range(len(L)-1)]+[1]
 
-
-
 # 期待输出:
 # [1]
 # [1, 1]
