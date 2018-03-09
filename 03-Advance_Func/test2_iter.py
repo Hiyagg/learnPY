@@ -14,6 +14,7 @@ def findMinAndMax(L):
             min=i
     return min,max
 
+
 # 测试
 if findMinAndMax([]) != (None, None):
     print('测试失败!')
