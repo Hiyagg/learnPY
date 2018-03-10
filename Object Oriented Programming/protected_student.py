@@ -1,3 +1,8 @@
+# 访问限制
+
+#!/usr/bin/env python3
+# -*- coding: utf-8 -
+
 class Student(object):
     def __init__(self, name, gender):
         self.name = name
